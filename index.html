@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Profile</title>
+
+    <!-- title logo -->
+    <link rel="icon" href="image/logo.png" type="image/x-icon" />
+
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Devicon link-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- header section starts -->
+
+    <header>
+      <div id="menu-bars" class="fas fa-bars"></div>
+      <div class="navbar">
+        <a href="#home">profile</a>
+        <a href="#about">about</a>
+        <a href="#blogs">experience</a>
+        <a href="#portfolio">achievements</a>
+        <a href="#service">skills</a>
+        <a href="#contact">contact</a>
+      </div>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+
+    <section class="home" id="home">
+      <div id="particles-js"></div>
+
+      <div class="content">
+        <img class="tilt" src="image/profile.jpg" alt="" />
+        <h3>Htet <span> Naing </span></h3>
+        <p>i am a <span class="typing-text"> front end developer </span></p>
+        <!-- <a href="#about" class="btn"> about me </a> -->
+      </div>
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- about section starts -->
+
+    <section class="about" id="about">
+      <h1 class="heading">about <span>me</span></h1>
+
+      <div class="row">
+        <div class="image">
+          <img class="tilt" src="image/about-pic.jpg" alt="" />
+        </div>
+
+        <div class="content">
+          <!-- <h3>My Name Is <span> htet naing </span></h3> -->
+          <p class="info">
+            I'm Htet Naing Aung, a mid-level Java Software Engineer with 4+
+            years of experience in backend and full-stack development. I've
+            built scalable microservices and real-time systems for e-commerce
+            and logistics platforms using Java, Spring Boot, Angular, Kafka, and
+            cloud technologies like AWS and GCP. I thrive in Agile teams, mentor
+            junior engineers, and hold a Computer Science degree along with a
+            Google Cloud Digital Leader Certificate. I'm passionate about clean
+            code, DevOps, and delivering impactful software that scales.
+          </p>
+          <div class="box-container">
+            <div class="box">
+              <p><span> age: </span> 27</p>
+              <p><span> gender: </span> male</p>
+              <p><span> experience: </span> 4+ years</p>
+              <p><span> On-site / Remote: </span> available</p>
+              <p><span> Salary: </span> negotiable</p>
+            </div>
+            <div class="box">
+              <p><span> language: </span> English</p>
+              <p><span> phone: </span> +84-359624255 | +95-9961514366</p>
+              <p class="email">
+                <span> email: </span> htetnaing.ucsmdy@gmail.com
+              </p>
+              <p><span> address: </span> Da Nang, Vietnam</p>
+              <p><span> citizen: </span> Myanmar</p>
+            </div>
+          </div>
+          <a href="files/Software Engineer (Java) Mid-Level.pdf" class="btn">
+            download CV
+          </a>
+          <a href="files/Recommendation_Letter.pdf" class="btn">
+            recommendation letter
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- about section ends -->
+
+    <!-- blogs section starts -->
+
+    <section class="blogs" id="blogs">
+      <h1 class="heading"><span> my </span> hand-On Experience</h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="image/seattle.png" alt="" />
+          <h3>Seattle Consulting Myanmar</h3>
+          <p>
+            Performed as a Full-Stack Software Engineer by using Angular and
+            Java in ERP System Development for 2 years.
+          </p>
+          <button class="btn" onclick="showSeattleModal()">learn more</button>
+        </div>
+
+        <div id="seattleModal" class="custom-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>Full-Stack Software Engineer (Angular + Java)</h2>
+              <span class="close-btn" onclick="closeSeattleModal()"
+                >&times;</span
+              >
+            </div>
+            <div class="modal-body">
+              <div class="modal-title">
+                <p>
+                  <strong>Company Name:</strong> 
+                  <a href="https://rocketreach.co/seattle-consulting-myanmar-co-ltd-profile_b5ff48f3f42d361b" style="text-decoration: underline">
+                    Seattle Consulting Myanmar Co., Ltd
+                  </a>
+                </p>
+                <p>
+                  <strong>Duration:</strong> Dec 2020 – Jun 2022 (1 Year & 6
+                  Months)
+                </p>
+                <p><strong>Project:</strong> ERP System Development</p>
+                <p>
+                  <strong>Technologies:</strong> Core Java, J2EE, Angular,
+                  Spring Boot, Spring Security, Data JPA, Hibernate, PostgreSQL,
+                  GitHub, Jenkins, AWS
+                </p>
+                <p>
+                  <strong>Location:</strong>
+                  <a
+                    href="https://maps.app.goo.gl/NCx8HBeMRXKkuGk5A"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style="text-decoration: underline"
+                  >
+                    Yangon, Myanmar
+                  </a>
+                </p>
+              </div>
+              <ul class="modal-list">
+                <p>
+                  <strong class="modal-sub-title">responsibility</strong> </br></br>
+                  <li>
+                    Designed and implemented core ERP modules including
+                    inventory management, procurement, sales orders, and
+                    financial accounting using Java, Spring Boot, and
+                    PostgreSQL.
+                  </li>
+                  <li>
+                    Developed scalable RESTful APIs with Spring Data JPA and
+                    Hibernate to enable seamless data access and business logic
+                    execution across ERP components.
+                  </li>
+                  <li>
+                    Built dynamic and responsive user interfaces with Angular,
+                    improving usability and workflow efficiency for enterprise
+                    users.
+                  </li>
+                  <li>
+                    Integrated GitHub for version control and collaborative
+                    development, ensuring code quality through pull requests,
+                    branching strategies, and issue tracking.
+                  </li>
+                  <li>
+                    Automated build, test, and deployment pipelines using
+                    Jenkins and GitLab CI/CD, enabling rapid delivery and
+                    rollback of ERP features.
+                  </li>
+                  <li>
+                    Optimized database schema and SQL queries to enhance system
+                    performance under high transaction volumes and concurrent
+                    user load.
+                  </li>
+                  <li>
+                    Ensured secure and reliable communication between frontend
+                    and backend via REST APIs, implementing role-based access
+                    control and data validation.
+                  </li>
+                  <li>
+                    Participated in Agile/Scrum ceremonies, contributing to
+                    sprint planning, daily stand-ups, and retrospectives to
+                    drive continuous improvement.
+                  </li>
+                  <li>
+                    Conducted unit and integration testing to maintain high code
+                    coverage and reduce production defects.
+                  </li>
+                  <li>
+                    Collaborated with cross-functional teams including QA,
+                    DevOps, and business analysts to align technical solutions
+                    with business requirements.
+                  </li>
+                </p>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="image/NTT.png" alt="" />
+          <h3>NTT DATA Myanmar</h3>
+          <p>
+            Performed as a Java Backend Engineer by using Java, Spring Boot,
+            JPA, Hibernate, PostgreSQL and Multi-Threading in Myanmar's
+            logistics system.
+          </p>
+          <button class="btn" onclick="showNttModal()">learn more</button>
+        </div>
+
+        <div id="nttModal" class="custom-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>Java Backend Engineer</h2>
+              <span class="close-btn" onclick="closeNttModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+              <div class="modal-title">
+                <p>
+                  <strong>Company Name:</strong>
+                  <a
+                    href="https://www.infonttdatamyanmar.com.mm/"
+                    style="text-decoration: underline"
+                  >
+                    NTT DATA Myanmar Co., Ltd
+                  </a>
+                </p>
+                <p><strong>Duration:</strong> Jun 2022 – Jun 2025 (3 Years)</p>
+                <p>
+                  <strong>Project:</strong>
+                  <a
+                    href="https://myanmar.gov.mm/-/myanmar-automated-cargo-clearance-system-maccs-"
+                    style="text-decoration: underline"
+                  >
+                    Myanmar Automated Cargo Clearance System (MACCS)
+                  </a>
+                </p>
+                <p>
+                  <strong>Technologies:</strong> Core Java, J2EE, Microservices,
+                  Spring Boot, Spring Security, Spring Batch, XML,
+                  Multi-Threading, Data JPA, Hibernate, PostgreSQL, GitHub,
+                  Jenkins, GCP
+                </p>
+                <p>
+                  <strong>Location:</strong>
+                  <a
+                    href="https://maps.app.goo.gl/sVuJdnCnFcHqJNA59"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style="text-decoration: underline"
+                  >
+                    Yangon, Myanmar, MICT Park
+                  </a>
+                </p>
+              </div>
+              <ul class="modal-list">
+                <p>
+                  <strong class="modal-sub-title">achievements</strong> </br></br>
+                  <li>
+                    <strong>( system bug fix award for year 2023 ) | </system></strong>
+                    <a href="image/bug-fix-award.jpg" >click here</a>
+                  </li>
+                  <li>
+                    I performed as a Java Backend Engineer at Batch Team of NTT DATA Myanmar Co.,Ltd.
+                  </li>
+                  <li>
+                    I investigated, troubleshoot and solved many incidents, issues and bugs of Myanmar Logistics System.
+                  </li>
+                  <li>
+                    At 15 March 2024, our Batch Team got ZPM & Over 1 MB System Bug Fix Award.
+                  </li>
+                  <li>
+                    This award indicate our hard working, smart working, collaboration skills, excellent technical skills and communication skills.
+                  </li>
+                </br>
+                  <li>
+                    <strong>( collaboration team award for year 2025 ) | </system></strong>
+                    <a href="image/collaboration-team-award.jpg">click here</a>
+                  </li>
+                  <li>
+                    Our team successfully developed and released a new big project Regional Expansion (Tachileik) of Myanmar Logistics System without any error and bugs within contract time.
+                  </li>
+                  <li>
+                    So me and my colleagues achieved Collaboration Team Award in 21 March 2025.
+                  </li>
+                </p>
+              </ul>
+              <ul class="modal-list">
+                <p>
+                  <strong class="modal-sub-title">Responsibility</strong> </br></br>
+                  <li>
+                    Designed and developed scalable backend applications using
+                    Java, Spring Boot, Hibernate, and open-source frameworks,
+                    powering mission-critical logistics and e-commerce
+                    platforms.
+                  </li>
+                  <li>
+                    Built and optimized RESTful APIs and microservices
+                    architectures to ensure high availability, resilience, and
+                    performance for thousands of concurrent users.
+                  </li>
+                  <li>
+                    Implemented automated testing strategies (unit, integration,
+                    and acceptance tests), improving system reliability,
+                    reducing defects, and supporting CI/CD pipelines with
+                    Jenkins and GitHub Actions.
+                  </li>
+                  <li>
+                    Collaborated closely with cross-functional teams (product
+                    managers, frontend engineers, UX designers) in Agile/Scrum
+                    environments, ensuring alignment between product vision and
+                    technical execution.
+                  </li>
+                  <li>
+                    Deployed and maintained applications in AWS (EKS, EC2, RDS,
+                    S3) with Kubernetes and Docker, enhancing system scalability
+                    and operational efficiency.
+                  </li>
+                  <li>
+                    Applied SQL optimization in PostgreSQL and MySQL to improve
+                    query performance and support large-scale transaction
+                    processing.
+                  </li>
+                  <li>
+                    Mentored junior engineers, promoting clean code practices,
+                    DevOps adoption, and test-driven development while fostering
+                    a culture of continuous improvement and collaboration.
+                  </li>
+                  <li>
+                    Contributed innovative ideas and implemented event-driven
+                    architectures with Kafka, supporting real-time features such
+                    as notifications, order tracking, and live analytics.
+                  </li>
+                  <li>
+                    Actively researched and integrated emerging programming
+                    trends and AI-powered development tools to improve
+                    productivity and accelerate delivery cycles.
+                  </li>
+                </p>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="image/ecommerce.jpg" alt="" />
+          <h3>E-Commerce Project</h3>
+          <p>
+            Implementing an E-Commerce backend services by using Java, Spring
+            Boot, Spring Security, JPA, Hibernate, PostgreSQL and Microservices.
+          </p>
+          <a href="https://github.com/htetnaing-hub/E-Commerce" class="btn">learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- blogs section ends -->
+
+    <!-- portfolio section starts -->
+
+    <section class="portfolio" id="portfolio">
+      <h1 class="heading"><span> my </span> achievements</h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="image/cloud-digital-leader-certificate.jpg" alt="" />
+          <div class="content">
+            <a href="files/Cloud-Digital-Leader-Certificate.pdf" class="btn">learn more</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="image/bug-fix-award.jpg" alt="" />
+          <div class="content">
+            <a href="image/bug-fix-award.jpg" class="btn">learn more</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="image/collaboration-team-award.jpg" alt="" />
+          <div class="content">
+            <a href="image/collaboration-team-award.jpg" class="btn">learn more</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="image/rest-api-certificate.jpg" alt="" />
+          <div class="content">
+            <a href="files/rest_api_intermediate certificate.pdf" class="btn">learn more</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="image/degree.jpg" alt="" />
+          <div class="content">
+            <a href="image/degree.jpg" class="btn">learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- portfolio section ends -->
+
+    <!-- services section starts -->
+
+    <section class="service" id="service">
+      <h1 class="heading"><span> my </span> skills</h1>
+
+      <div class="box-container">
+        <div class="box tilt">
+          <i class="fab fa-java"></i>
+          <h3>java REST API development</h3>
+          <p>
+            Scalable, high performance and maintainable java Rest API backend
+            development for E-Commerce Web Application.
+          </p>
+        </div>
+
+        <div class="box tilt">
+          <i class="fas fa-code"></i>
+          <h3>Responsive Designs</h3>
+          <p>
+            E-Commerce Web Application <br />
+            Car Selling Page <br />
+            Kitchen Store
+          </p>
+        </div>
+
+        <div class="box tilt">
+          <i class="devicon-postgresql-plain colored"></i>
+          <h3>PostgreSQL Database</h3>
+          <p>
+            Experienced in designing and optimizing PostgreSQL schemas for
+            scalable web applications.
+          </p>
+        </div>
+
+        <div class="box tilt">
+          <i class="devicon-mysql-plain colored"></i>
+          <h3>MySQL Database</h3>
+          <p>
+            Skilled in designing and managing relational databases using MySQL
+            for high-performance applications.
+          </p>
+        </div>
+
+        <div class="box tilt">
+          <i class="devicon-googlecloud-plain colored"></i>
+          <h3>Google Cloud Platform</h3>
+          <p>
+            Skilled in deploying and managing cloud-native applications using
+            GCP services like App Engine, GKE, and Cloud Run.
+          </p>
+        </div>
+
+        <div class="box tilt">
+          <i class="devicon-junit-plain colored"></i>
+          <h3>JUnit Testing</h3>
+          <p>
+            Experienced in writing unit and integration tests using JUnit to
+            ensure code reliability and quality.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- services section ends -->
+
+    <!-- contact section starts -->
+
+    <section class="contact" id="contact">
+      <h1 class="heading">contact <span> me </span></h1>
+      <div class="footer">
+        <div class="box-container">
+          <div class="box">
+            <div class="share">
+              <a href="https://www.linkedin.com/in/htet-naing-aung-a91989212/"
+                ><i class="btn fa-brands fa-linkedin" aria-hidden="true"></i
+              ></a>
+              <a href="mailto:htetnaing.ucsmdy@gmail.com">
+                <i class="btn fa-solid fa-envelope" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://line.me/ti/p/tiGeoOULD6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="btn fa-brands fa-line" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://wa.me/+66931296650"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="btn fa-brands fa-whatsapp" aria-hidden="true"></i>
+              </a>
+            </div>
+            <p>
+              You can send me direct message via LinkedIn, Email, Line,
+              WhatsApp.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- footer section -->
+
+    <div class="footer">
+      created by <span> mr. htet naing aung </span> | all rights reserved!
+    </div>
+
+    <!-- javascript part -->
+
+    <!-- typed.js link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+    <!-- particles.js link -->
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- vanilla-tilt.js link -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.1/vanilla-tilt.min.js"
+      integrity="sha512-xTXLkWCanTzPE4g+vyMXdJ1MYKwuhdJqxNfPDE8sHnwwHBXTZY0VNWBiCRiDtGEtLzmLkK5GCSXshPCP2kt8Ug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      let menu = document.querySelector("#menu-bars");
+      let header = document.querySelector("header");
+
+      menu.onclick = () => {
+        menu.classList.toggle("fa-times");
+        header.classList.toggle("active");
+      };
+
+      window.scroll = () => {
+        menu.classList.remove("fa-times");
+        header.classList.remove("active");
+      };
+
+      var typed = new Typed(".typing-text", {
+        strings: ["full-stack developer", "java developer"],
+        loop: true,
+        typeSpeed: 150,
+      });
+
+      VanillaTilt.init(document.querySelectorAll(".tilt"), {
+        max: 25,
+      });
+    </script>
+  </body>
+</html>
+
+<script>
+  function showSeattleModal() {
+    document.getElementById("seattleModal").style.display = "flex";
+  }
+
+  function closeSeattleModal() {
+    document.getElementById("seattleModal").style.display = "none";
+  }
+
+  // Optional: close modal when clicking outside
+  window.onclick = function (event) {
+    const modal = document.getElementById("seattleModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  function showNttModal() {
+    document.getElementById("nttModal").style.display = "flex";
+  }
+
+  function closeNttModal() {
+    document.getElementById("nttModal").style.display = "none";
+  }
+
+  // Optional: close modal when clicking outside
+  window.onclick = function (event) {
+    const modal = document.getElementById("nttModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>

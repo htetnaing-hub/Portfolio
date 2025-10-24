@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seattle Consulting Myanmar</title>
+    <link rel="icon" href="image/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- header section starts -->
+    <header>
+      <div id="menu-bars" class="fas fa-bars"></div>
+      <div class="navbar">
+        <a href="index.html">home</a>
+        <a href="#experience">experience</a>
+        <a href="#skills">skills</a>
+        <a href="#project">project</a>
+      </div>
+    </header>
+    <!-- header section ends -->
+
+    <!-- experience section starts -->
+    <section class="service" id="experience">
+      <h1 class="heading"><span>Seattle</span> Experience</h1>
+      <div class="box-container">
+        <div class="box tilt">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Full-Stack Development</h3>
+          <p>
+            Built responsive e-commerce web applications using Angular.js for
+            frontend and Java Spring Boot for backend.
+          </p>
+        </div>
+        <div class="box tilt">
+          <i class="fas fa-project-diagram"></i>
+          <h3>System Design</h3>
+          <p>
+            Created flowchart diagrams for business logic and API design, and ER
+            diagrams for database schema.
+          </p>
+        </div>
+        <div class="box tilt">
+          <i class="devicon-junit-plain colored"></i>
+          <h3>JUnit Testing</h3>
+          <p>
+            Wrote unit tests using JUnit to ensure backend reliability and
+            maintainability.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- experience section ends -->
+
+    <!-- skills section starts -->
+    <section class="service" id="skills">
+      <h1 class="heading"><span>My</span> Skills</h1>
+      <div class="box-container">
+        <div class="box tilt">
+          <i class="fab fa-java"></i>
+          <h3>Java & Spring Boot</h3>
+          <p>Backend development and RESTful API design</p>
+        </div>
+        <div class="box tilt">
+          <i class="fab fa-angular"></i>
+          <h3>Angular.js</h3>
+          <p>Responsive UI and dynamic web components</p>
+        </div>
+        <div class="box tilt">
+          <i class="fas fa-database"></i>
+          <h3>Database Design</h3>
+          <p>Schema creation using ER diagrams for MySQL/PostgreSQL</p>
+        </div>
+      </div>
+    </section>
+    <!-- skills section ends -->
+
+    <!-- project section starts -->
+    <section class="portfolio" id="project">
+      <h1 class="heading"><span>Project</span> Link</h1>
+      <div class="box-container">
+        <div class="box tilt">
+          <img src="image/seattle.png" alt="Seattle Project" />
+          <div class="content">
+            <a href="https://yourprojectlink.com" target="_blank" class="btn"
+              >View Project</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- project section ends -->
+
+    <!-- footer section -->
+    <div class="footer">
+      created by <span>mr. htet naing aung</span> | all rights reserved!
+    </div>
+
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.1/vanilla-tilt.min.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".tilt"), {
+        max: 25,
+      });
+
+      let menu = document.querySelector("#menu-bars");
+      let header = document.querySelector("header");
+
+      menu.onclick = () => {
+        menu.classList.toggle("fa-times");
+        header.classList.toggle("active");
+      };
+
+      window.onscroll = () => {
+        menu.classList.remove("fa-times");
+        header.classList.remove("active");
+      };
+    </script>
+  </body>
+</html>
