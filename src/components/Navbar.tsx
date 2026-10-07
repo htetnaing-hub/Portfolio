@@ -38,7 +38,7 @@ export function Navbar() {
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Main">
         <a href="#top" className="flex items-center gap-2.5 font-semibold text-slate-900 dark:text-white">
-          <span className="grid size-8 place-items-center rounded-lg bg-gradient-to-br from-accent-500 to-sky-600 text-xs font-bold text-white shadow-md shadow-accent-500/20">
+          <span className="grid size-8 place-items-center rounded-lg bg-gradient-to-br from-accent-500 to-green-600 text-xs font-bold text-white shadow-md shadow-accent-500/20">
             HN
           </span>
           <span className="hidden sm:inline">{profile.name}</span>
@@ -75,7 +75,7 @@ export function Navbar() {
             href={profile.cv}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-2 rounded-lg bg-gradient-to-r from-accent-600 to-sky-600 px-3.5 py-2 text-sm font-semibold text-white shadow-md shadow-accent-600/20 transition-opacity hover:opacity-90 sm:inline-flex dark:from-accent-400 dark:to-sky-400 dark:text-ink"
+            className="hidden items-center gap-2 rounded-lg bg-gradient-to-r from-accent-600 to-green-600 px-3.5 py-2 text-sm font-semibold text-white shadow-md shadow-accent-600/20 transition-opacity hover:opacity-90 sm:inline-flex dark:from-accent-400 dark:to-lime-400 dark:text-ink"
           >
             <Download className="size-4" /> Resume
           </a>
@@ -116,7 +116,7 @@ export function Navbar() {
                   href={profile.cv}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-accent-600 to-sky-600 px-3 py-2.5 font-semibold text-white"
+                  className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-accent-600 to-green-600 px-3 py-2.5 font-semibold text-white"
                 >
                   <Download className="size-4" /> Download resume
                 </a>

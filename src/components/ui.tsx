@@ -25,7 +25,7 @@ export function Section({
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
         <Reveal>
           <p className="inline-flex items-center gap-2 font-mono text-sm font-medium tracking-wide text-accent-700 dark:text-accent-300">
-            <span className="h-px w-8 bg-gradient-to-r from-accent-500 to-sky-500" />
+            <span className="h-px w-8 bg-gradient-to-r from-accent-500 to-lime-500" />
             {eyebrow}
           </p>
           <h2
@@ -94,7 +94,7 @@ export function SpotlightCard({ children, className = '' }: { children: ReactNod
 
 const buttonStyles = {
   primary:
-    'bg-gradient-to-r from-accent-600 via-cyan-600 to-sky-600 bg-[length:200%_auto] text-white shadow-lg shadow-accent-600/20 hover:bg-right dark:from-accent-400 dark:via-cyan-400 dark:to-sky-400 dark:text-ink dark:shadow-accent-400/20',
+    'bg-gradient-to-r from-accent-600 via-green-600 to-green-600 bg-[length:200%_auto] text-white shadow-lg shadow-accent-600/20 hover:bg-right dark:from-accent-400 dark:via-green-400 dark:to-lime-400 dark:text-ink dark:shadow-accent-400/20',
   secondary:
     'border border-slate-300 bg-white/70 text-slate-800 backdrop-blur hover:border-slate-400 hover:bg-white dark:border-white/15 dark:bg-white/5 dark:text-slate-100 dark:hover:border-white/30 dark:hover:bg-white/10',
 }

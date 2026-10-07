@@ -30,7 +30,7 @@ export function Contact() {
         <Reveal>
           <div className="relative isolate overflow-hidden rounded-3xl bg-ink px-6 py-16 text-center ring-1 ring-white/10 sm:px-12">
             <div aria-hidden className="animate-aurora absolute -top-32 left-[10%] -z-10 size-96 rounded-full bg-accent-500/30 blur-[100px]" />
-            <div aria-hidden className="animate-aurora absolute -right-20 -bottom-40 -z-10 size-96 rounded-full bg-sky-500/20 blur-[100px] [animation-delay:-8s]" />
+            <div aria-hidden className="animate-aurora absolute -right-20 -bottom-40 -z-10 size-96 rounded-full bg-green-500/20 blur-[100px] [animation-delay:-8s]" />
             <div
               aria-hidden
               className="absolute inset-0 -z-10 [background-image:linear-gradient(to_right,rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.04)_1px,transparent_1px)] [background-size:40px_40px]"
@@ -38,7 +38,7 @@ export function Contact() {
 
             <p className="font-mono text-sm font-medium text-accent-300">08 · Contact</p>
             <h2 id="contact-title" className="mx-auto mt-3 max-w-2xl text-3xl font-bold tracking-tight text-balance text-white sm:text-5xl">
-              Let's build something <span className="bg-gradient-to-r from-accent-300 via-cyan-400 to-sky-400 bg-clip-text text-transparent">reliable</span> together
+              Let's build something <span className="bg-gradient-to-r from-accent-300 via-green-400 to-lime-400 bg-clip-text text-transparent">reliable</span> together
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-lg text-pretty text-slate-300">
               I'm open to Java, Senior Java and Full-Stack roles, remote or on-site. The fastest way to reach me is email or LinkedIn.
@@ -47,7 +47,7 @@ export function Contact() {
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
               <a
                 href={`mailto:${profile.email}`}
-                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-accent-400 via-cyan-400 to-sky-400 px-5 py-3 text-sm font-semibold text-ink shadow-lg shadow-accent-400/20"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-accent-400 via-green-400 to-lime-400 px-5 py-3 text-sm font-semibold text-ink shadow-lg shadow-accent-400/20"
               >
                 <Mail className="size-4" /> {profile.email}
               </a>

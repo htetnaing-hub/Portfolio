@@ -89,8 +89,8 @@ function Backdrop() {
     <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
       <div className="absolute inset-0 [background-image:linear-gradient(to_right,rgb(148_163_184/0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgb(148_163_184/0.12)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_75%_60%_at_50%_0%,#000_55%,transparent_100%)] dark:[background-image:linear-gradient(to_right,rgb(255_255_255/0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.05)_1px,transparent_1px)]" />
       <div className="animate-aurora absolute -top-48 -left-32 size-[560px] rounded-full bg-accent-400/25 blur-[120px] dark:bg-accent-600/20" />
-      <div className="animate-aurora absolute -top-24 right-[-10%] size-[520px] rounded-full bg-sky-300/25 blur-[120px] [animation-delay:-6s] dark:bg-sky-600/15" />
-      <div className="animate-aurora absolute top-[40%] left-[35%] size-[420px] rounded-full bg-cyan-200/30 blur-[120px] [animation-delay:-12s] dark:bg-cyan-500/10" />
+      <div className="animate-aurora absolute -top-24 right-[-10%] size-[520px] rounded-full bg-green-300/25 blur-[120px] [animation-delay:-6s] dark:bg-green-600/15" />
+      <div className="animate-aurora absolute top-[40%] left-[35%] size-[420px] rounded-full bg-lime-200/30 blur-[120px] [animation-delay:-12s] dark:bg-lime-500/10" />
     </div>
   )
 }
@@ -151,7 +151,7 @@ function Portrait() {
       <div className="relative overflow-hidden rounded-[2rem] p-[2px] shadow-2xl shadow-accent-900/10 dark:shadow-accent-500/10">
         <div
           aria-hidden
-          className="animate-spin-slow absolute top-1/2 left-1/2 aspect-square w-[160%] -translate-x-1/2 -translate-y-1/2 bg-[conic-gradient(from_0deg,#14b8a6,#22d3ee,#0ea5e9,#14b8a6)]"
+          className="animate-spin-slow absolute top-1/2 left-1/2 aspect-square w-[160%] -translate-x-1/2 -translate-y-1/2 bg-[conic-gradient(from_0deg,#10b981,#22c55e,#a3e635,#10b981)]"
         />
         <img
           src={profile.photo}

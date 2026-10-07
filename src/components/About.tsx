@@ -63,7 +63,7 @@ export function About() {
           return (
             <Reveal key={role.title} delay={i * 0.07} className="h-full">
               <SpotlightCard className="h-full p-6">
-                <div className="grid size-11 place-items-center rounded-xl bg-gradient-to-br from-accent-500 to-sky-500 text-white shadow-lg shadow-accent-500/20">
+                <div className="grid size-11 place-items-center rounded-xl bg-gradient-to-br from-accent-500 to-lime-500 text-white shadow-lg shadow-accent-500/20">
                   <Icon className="size-5" />
                 </div>
                 <h4 className="mt-5 font-semibold text-slate-900 dark:text-white">{role.title}</h4>
