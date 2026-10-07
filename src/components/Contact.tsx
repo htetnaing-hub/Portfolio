@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { Check, Copy, Download, Mail, Phone } from 'lucide-react'
+import { FaLine, FaWhatsapp } from 'react-icons/fa6'
 import { profile } from '../data/profile'
-import { ButtonLink, Reveal } from './ui'
 import { socials } from '../data/socials'
+import { Reveal } from './ui'
 
 export function Contact() {
   const [copied, setCopied] = useState(false)
@@ -17,53 +18,78 @@ export function Contact() {
     }
   }
 
+  const channels = [
+    { label: 'Phone / Zalo', value: profile.phone, href: `tel:${profile.phone.replace(/\s/g, '')}`, Icon: Phone },
+    { label: 'WhatsApp', value: profile.whatsapp, href: profile.links.whatsapp, Icon: FaWhatsapp },
+    { label: 'LINE', value: profile.line, href: profile.links.line, Icon: FaLine },
+  ]
+
   return (
-    <section id="contact" aria-labelledby="contact-title" className="bg-slate-50 dark:bg-slate-900/40">
-      <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+    <section id="contact" aria-labelledby="contact-title" className="bg-slate-50/80 dark:bg-white/[0.015]">
+      <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl bg-slate-900 px-6 py-14 text-center sm:px-12 dark:bg-slate-900 dark:ring-1 dark:ring-slate-800">
-            <div aria-hidden className="pointer-events-none absolute -top-24 left-1/2 h-64 w-[36rem] -translate-x-1/2 rounded-full bg-accent-500/25 blur-3xl" />
-            <p className="relative font-mono text-sm font-medium text-accent-300">07 · Contact</p>
-            <h2 id="contact-title" className="relative mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Let's build something reliable together
+          <div className="relative isolate overflow-hidden rounded-3xl bg-ink px-6 py-16 text-center ring-1 ring-white/10 sm:px-12">
+            <div aria-hidden className="animate-aurora absolute -top-32 left-[10%] -z-10 size-96 rounded-full bg-accent-500/30 blur-[100px]" />
+            <div aria-hidden className="animate-aurora absolute -right-20 -bottom-40 -z-10 size-96 rounded-full bg-violet-600/30 blur-[100px] [animation-delay:-8s]" />
+            <div
+              aria-hidden
+              className="absolute inset-0 -z-10 [background-image:linear-gradient(to_right,rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.04)_1px,transparent_1px)] [background-size:40px_40px]"
+            />
+
+            <p className="font-mono text-sm font-medium text-accent-300">08 · Contact</p>
+            <h2 id="contact-title" className="mx-auto mt-3 max-w-2xl text-3xl font-bold tracking-tight text-balance text-white sm:text-5xl">
+              Let's build something <span className="bg-gradient-to-r from-accent-300 via-sky-400 to-violet-400 bg-clip-text text-transparent">reliable</span> together
             </h2>
-            <p className="relative mx-auto mt-4 max-w-xl text-lg text-slate-300">
-              I'm open to Java backend roles, remote or on-site. The fastest way to reach me is email or LinkedIn.
+            <p className="mx-auto mt-5 max-w-xl text-lg text-pretty text-slate-300">
+              I'm open to Java, Senior Java and Full-Stack roles, remote or on-site. The fastest way to reach me is email or LinkedIn.
             </p>
 
-            <div className="relative mt-8 flex flex-wrap items-center justify-center gap-3">
-              <ButtonLink href={`mailto:${profile.email}`}>
+            <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href={`mailto:${profile.email}`}
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-accent-400 via-sky-400 to-violet-400 px-5 py-3 text-sm font-semibold text-ink shadow-lg shadow-accent-400/20"
+              >
                 <Mail className="size-4" /> {profile.email}
-              </ButtonLink>
+              </a>
               <button
                 type="button"
                 onClick={copyEmail}
-                className="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-4 py-2.5 text-sm font-semibold text-slate-200 hover:bg-slate-800"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 hover:bg-white/10"
               >
-                {copied ? <Check className="size-4 text-accent-400" /> : <Copy className="size-4" />}
+                {copied ? <Check className="size-4 text-accent-300" /> : <Copy className="size-4" />}
                 {copied ? 'Copied!' : 'Copy email'}
               </button>
               <a
                 href={profile.cv}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-4 py-2.5 text-sm font-semibold text-slate-200 hover:bg-slate-800"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 hover:bg-white/10"
               >
                 <Download className="size-4" /> Resume (PDF)
               </a>
             </div>
 
-            <p className="relative mt-6 inline-flex items-center gap-2 text-sm text-slate-400">
-              <Phone className="size-4" />
-              <a href={`tel:${profile.phone.replace(/\s/g, '')}`} className="hover:text-white">
-                {profile.phone}
-              </a>
-              <span aria-hidden>·</span> Phone / Zalo
-            </p>
+            <ul className="mx-auto mt-10 grid max-w-3xl gap-3 sm:grid-cols-3">
+              {channels.map(({ label, value, href, Icon }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    {...(href.startsWith('tel') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+                    className="flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3 text-left ring-1 ring-white/10 transition-colors hover:bg-white/10"
+                  >
+                    <Icon className="size-5 shrink-0 text-accent-300" />
+                    <span>
+                      <span className="block text-xs text-slate-400">{label}</span>
+                      <span className="block text-sm font-medium whitespace-nowrap text-white">{value}</span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
 
-            <ul className="relative mt-8 flex flex-wrap justify-center gap-3">
+            <ul className="mt-8 flex flex-wrap justify-center gap-3">
               {socials
-                .filter((s) => s.label !== 'Email')
+                .filter((s) => s.label === 'GitHub' || s.label === 'LinkedIn')
                 .map(({ label, href, Icon }) => (
                   <li key={label}>
                     <a

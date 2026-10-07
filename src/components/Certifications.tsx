@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { BadgeCheck, ExternalLink } from 'lucide-react'
+import { BadgeCheck, ExternalLink, ZoomIn } from 'lucide-react'
 import { certifications } from '../data/profile'
-import { Card, Reveal, Section } from './ui'
+import { Reveal, Section, SpotlightCard } from './ui'
 import { Lightbox, type LightboxImage } from './Lightbox'
 
 export function Certifications() {
@@ -10,27 +10,34 @@ export function Certifications() {
   return (
     <Section
       id="certifications"
-      eyebrow="05 · Certifications"
-      title="Licenses & certifications"
-      intro="Cloud and API certifications from Oracle, Google Cloud and HackerRank. Each one links to its official verification page."
+      eyebrow="06 · Certifications"
+      title={
+        <>
+          <span className="text-gradient">{certifications.length} verified</span> certifications
+        </>
+      }
+      intro="Software engineering, cloud and API certifications from HackerRank, Oracle and Google Cloud. Each one links to its official verification page."
       muted
     >
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {certifications.map((c, i) => (
-          <Reveal key={c.name} delay={i * 0.05} className="h-full">
-            <Card className="flex h-full flex-col overflow-hidden">
+          <Reveal key={c.name} delay={(i % 3) * 0.06} className="h-full">
+            <SpotlightCard className="flex h-full flex-col overflow-hidden">
               <button
                 type="button"
                 onClick={() => setPreview({ src: c.image, alt: `${c.name} certificate` })}
-                className="group block overflow-hidden border-b border-slate-200 bg-slate-100 dark:border-slate-800 dark:bg-slate-800"
+                className="group relative block overflow-hidden rounded-t-2xl border-b border-slate-200 bg-slate-100 dark:border-white/10 dark:bg-white/5"
                 aria-label={`View ${c.name} certificate`}
               >
                 <img
                   src={c.image}
                   alt=""
                   loading="lazy"
-                  className="aspect-[7/5] w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
+                  className="aspect-[7/5] w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
+                <span className="absolute inset-0 grid place-items-center bg-ink/0 opacity-0 transition-all group-hover:bg-ink/40 group-hover:opacity-100">
+                  <ZoomIn className="size-8 text-white" />
+                </span>
               </button>
               <div className="flex flex-1 flex-col p-5">
                 <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
@@ -42,12 +49,12 @@ export function Certifications() {
                   href={c.verifyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-semibold text-accent-700 hover:underline dark:text-accent-400"
+                  className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-semibold text-accent-700 hover:underline dark:text-accent-300"
                 >
                   Verify credential <ExternalLink className="size-3.5" />
                 </a>
               </div>
-            </Card>
+            </SpotlightCard>
           </Reveal>
         ))}
       </div>

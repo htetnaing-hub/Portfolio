@@ -1,30 +1,36 @@
 import { ArrowUpRight, FolderGit2, Lock } from 'lucide-react'
 import { FaGithub } from 'react-icons/fa6'
 import { projects } from '../data/profile'
-import { Card, Reveal, Section, Tag } from './ui'
+import { Reveal, Section, SpotlightCard, Tag } from './ui'
 
 export function Projects() {
   return (
     <Section
       id="projects"
-      eyebrow="03 · Projects"
-      title="Selected projects"
-      intro="Personal and portfolio work with source you can read: design decisions, tests and CI included."
+      eyebrow="04 · Projects"
+      title={
+        <>
+          Selected work you can <span className="text-gradient">read the code of</span>
+        </>
+      }
+      intro="Backend and frontend projects with real design decisions, tests and CI included."
       muted
     >
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2">
         {projects.map((p, i) => (
-          <Reveal key={p.name} delay={i * 0.08} className="h-full">
-            <Card className="flex h-full flex-col p-6 transition-shadow hover:shadow-lg hover:shadow-slate-900/5">
+          <Reveal key={p.name} delay={(i % 2) * 0.08} className="h-full">
+            <SpotlightCard className="flex h-full flex-col p-6 sm:p-7">
               <div className="flex items-center justify-between">
-                <div className="grid size-10 place-items-center rounded-lg bg-accent-50 text-accent-700 dark:bg-accent-400/10 dark:text-accent-400">
+                <div className="grid size-11 place-items-center rounded-xl bg-accent-50 text-accent-700 ring-1 ring-accent-600/10 dark:bg-accent-400/10 dark:text-accent-300 dark:ring-accent-400/20">
                   <FolderGit2 className="size-5" />
                 </div>
-                <span className="font-mono text-xs text-slate-500 dark:text-slate-400">{p.label}</span>
+                <span className="rounded-full border border-slate-200 px-2.5 py-1 font-mono text-[11px] text-slate-500 dark:border-white/10 dark:text-slate-400">
+                  {p.label}
+                </span>
               </div>
 
-              <h3 className="mt-5 text-lg font-semibold text-slate-900 dark:text-white">{p.name}</h3>
-              <p className="mt-2 text-slate-600 dark:text-slate-400">{p.description}</p>
+              <h3 className="mt-5 text-xl font-semibold text-slate-900 dark:text-white">{p.name}</h3>
+              <p className="mt-2 text-pretty text-slate-600 dark:text-slate-400">{p.description}</p>
 
               <ul className="mt-4 space-y-2 text-sm">
                 {p.points.map((pt) => (
@@ -43,13 +49,13 @@ export function Projects() {
                 ))}
               </ul>
 
-              <div className="mt-auto flex flex-wrap gap-4 pt-6 text-sm font-semibold">
+              <div className="mt-auto flex flex-wrap gap-5 pt-6 text-sm font-semibold">
                 {p.repo && (
                   <a
                     href={p.repo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-slate-800 hover:text-accent-700 dark:text-slate-200 dark:hover:text-accent-400"
+                    className="inline-flex items-center gap-1.5 text-slate-800 hover:text-accent-700 dark:text-slate-200 dark:hover:text-accent-300"
                   >
                     <FaGithub className="size-4" /> Source code
                   </a>
@@ -59,9 +65,9 @@ export function Projects() {
                     href={p.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-accent-700 hover:underline dark:text-accent-400"
+                    className="group inline-flex items-center gap-1 text-accent-700 dark:text-accent-300"
                   >
-                    Live demo <ArrowUpRight className="size-4" />
+                    Live demo <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </a>
                 )}
                 {!p.repo && !p.demo && (
@@ -70,7 +76,7 @@ export function Projects() {
                   </span>
                 )}
               </div>
-            </Card>
+            </SpotlightCard>
           </Reveal>
         ))}
       </div>

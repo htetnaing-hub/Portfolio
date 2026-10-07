@@ -17,6 +17,48 @@
   --color-accent-700: #0f766e;
   --color-accent-800: #115e59;
   --color-accent-900: #134e4a;
+  --color-ink: #050816;
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-aurora: aurora 18s ease-in-out infinite alternate;
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-gradient: gradient 6s ease infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes aurora {
+    0% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(6%, 4%, 0) scale(1.1);
+    }
+    100% {
+      transform: translate3d(-4%, -2%, 0) scale(0.95);
+    }
+  }
+  @keyframes gradient {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
 }
 
 @layer base {
@@ -26,18 +68,74 @@
     -webkit-tap-highlight-color: transparent;
   }
   body {
-    @apply bg-white text-slate-700 antialiased dark:bg-slate-950 dark:text-slate-300;
+    @apply bg-white text-slate-700 antialiased dark:bg-ink dark:text-slate-300;
   }
   ::selection {
     @apply bg-accent-200 text-accent-900;
   }
   :focus-visible {
-    @apply outline-2 outline-offset-2 outline-accent-600;
+    @apply outline-2 outline-offset-2 outline-accent-500;
+  }
+}
+
+@layer components {
+  /* Brand gradient text: teal → sky → violet */
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent-600 via-sky-500 to-violet-600 bg-[length:200%_auto] bg-clip-text text-transparent dark:from-accent-300 dark:via-sky-400 dark:to-violet-400;
+  }
+
+  /* Card whose border and background glow follow the cursor (see SpotlightCard). */
+  .spotlight {
+    position: relative;
+    isolation: isolate;
+  }
+  .spotlight::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border-radius: inherit;
+    padding: 1px;
+    background: radial-gradient(
+      420px circle at var(--x, 50%) var(--y, 50%),
+      rgb(45 212 191 / 0.8),
+      rgb(139 92 246 / 0.5) 35%,
+      transparent 65%
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .spotlight::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: radial-gradient(500px circle at var(--x, 50%) var(--y, 50%), rgb(45 212 191 / 0.08), transparent 45%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  .spotlight:hover::before,
+  .spotlight:hover::after {
+    opacity: 1;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  .animate-marquee,
+  .animate-aurora,
+  .animate-spin-slow,
+  .animate-gradient,
+  .animate-float {
+    animation: none !important;
   }
 }

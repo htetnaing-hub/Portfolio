@@ -7,6 +7,7 @@ import { useActiveSection, useTheme } from '../hooks'
 const links = [
   { id: 'about', label: 'About' },
   { id: 'experience', label: 'Experience' },
+  { id: 'ai', label: 'AI' },
   { id: 'projects', label: 'Projects' },
   { id: 'skills', label: 'Skills' },
   { id: 'certifications', label: 'Certifications' },
@@ -31,13 +32,13 @@ export function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-colors ${
         scrolled || open
-          ? 'border-b border-slate-200/80 bg-white/85 backdrop-blur-lg dark:border-slate-800/80 dark:bg-slate-950/85'
+          ? 'border-b border-slate-200/80 bg-white/85 backdrop-blur-lg dark:border-white/10 dark:bg-ink/75'
           : 'border-b border-transparent'
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Main">
         <a href="#top" className="flex items-center gap-2.5 font-semibold text-slate-900 dark:text-white">
-          <span className="grid size-8 place-items-center rounded-lg bg-accent-700 text-xs font-bold text-white dark:bg-accent-500 dark:text-slate-950">
+          <span className="grid size-8 place-items-center rounded-lg bg-gradient-to-br from-accent-500 to-violet-600 text-xs font-bold text-white shadow-md shadow-accent-500/20">
             HN
           </span>
           <span className="hidden sm:inline">{profile.name}</span>
@@ -51,7 +52,7 @@ export function Navbar() {
                 aria-current={active === link.id ? 'true' : undefined}
                 className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
                   active === link.id
-                    ? 'text-accent-700 dark:text-accent-400'
+                    ? 'bg-slate-900/5 text-accent-700 dark:bg-white/10 dark:text-accent-300'
                     : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'
                 }`}
               >
@@ -66,7 +67,7 @@ export function Navbar() {
             type="button"
             onClick={toggle}
             aria-label={dark ? 'Switch to light theme' : 'Switch to dark theme'}
-            className="grid size-9 place-items-center rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white"
+            className="grid size-9 place-items-center rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-white/10 dark:hover:text-white"
           >
             {dark ? <Sun className="size-[18px]" /> : <Moon className="size-[18px]" />}
           </button>
@@ -74,7 +75,7 @@ export function Navbar() {
             href={profile.cv}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-2 rounded-lg bg-accent-700 px-3.5 py-2 text-sm font-semibold text-white hover:bg-accent-800 sm:inline-flex dark:bg-accent-500 dark:text-slate-950 dark:hover:bg-accent-400"
+            className="hidden items-center gap-2 rounded-lg bg-gradient-to-r from-accent-600 to-violet-600 px-3.5 py-2 text-sm font-semibold text-white shadow-md shadow-accent-600/20 transition-opacity hover:opacity-90 sm:inline-flex dark:from-accent-400 dark:to-violet-400 dark:text-ink"
           >
             <Download className="size-4" /> Resume
           </a>
@@ -83,7 +84,7 @@ export function Navbar() {
             onClick={() => setOpen((o) => !o)}
             aria-label="Toggle menu"
             aria-expanded={open}
-            className="grid size-9 place-items-center rounded-lg text-slate-700 hover:bg-slate-100 lg:hidden dark:text-slate-300 dark:hover:bg-slate-800"
+            className="grid size-9 place-items-center rounded-lg text-slate-700 hover:bg-slate-100 lg:hidden dark:text-slate-300 dark:hover:bg-white/10"
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -96,7 +97,7 @@ export function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden border-t border-slate-200 lg:hidden dark:border-slate-800"
+            className="overflow-hidden border-t border-slate-200 lg:hidden dark:border-white/10"
           >
             <ul className="space-y-1 px-4 py-3">
               {links.map((link) => (
@@ -104,7 +105,7 @@ export function Navbar() {
                   <a
                     href={`#${link.id}`}
                     onClick={() => setOpen(false)}
-                    className="block rounded-md px-3 py-2.5 text-base font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+                    className="block rounded-md px-3 py-2.5 text-base font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-white/10"
                   >
                     {link.label}
                   </a>
@@ -115,7 +116,7 @@ export function Navbar() {
                   href={profile.cv}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-accent-700 px-3 py-2.5 font-semibold text-white dark:bg-accent-500 dark:text-slate-950"
+                  className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-accent-600 to-violet-600 px-3 py-2.5 font-semibold text-white"
                 >
                   <Download className="size-4" /> Download resume
                 </a>
