@@ -43,7 +43,7 @@ export function AiEngineering() {
             <Reveal key={p.title} delay={i * 0.08} className="h-full">
               <SpotlightCard className="h-full p-6 sm:p-7">
                 <div className="flex items-center gap-3">
-                  <div className="grid size-11 place-items-center rounded-xl bg-gradient-to-br from-violet-500 to-accent-500 text-white shadow-lg shadow-violet-500/20">
+                  <div className="grid size-11 place-items-center rounded-xl bg-gradient-to-br from-accent-600 to-accent-500 text-white shadow-lg shadow-accent-500/20">
                     <Icon className="size-5" />
                   </div>
                   <span className="font-mono text-xs text-slate-400">0{i + 1}</span>

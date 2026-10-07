@@ -88,9 +88,9 @@ function Backdrop() {
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
       <div className="absolute inset-0 [background-image:linear-gradient(to_right,rgb(148_163_184/0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgb(148_163_184/0.12)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_75%_60%_at_50%_0%,#000_55%,transparent_100%)] dark:[background-image:linear-gradient(to_right,rgb(255_255_255/0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.05)_1px,transparent_1px)]" />
-      <div className="animate-aurora absolute -top-48 -left-32 size-[560px] rounded-full bg-accent-400/30 blur-[120px] dark:bg-accent-500/25" />
-      <div className="animate-aurora absolute -top-24 right-[-10%] size-[520px] rounded-full bg-violet-400/25 blur-[120px] [animation-delay:-6s] dark:bg-violet-600/25" />
-      <div className="animate-aurora absolute top-[40%] left-[35%] size-[420px] rounded-full bg-pink-300/25 blur-[120px] [animation-delay:-12s] dark:bg-pink-500/15" />
+      <div className="animate-aurora absolute -top-48 -left-32 size-[560px] rounded-full bg-accent-400/25 blur-[120px] dark:bg-accent-600/20" />
+      <div className="animate-aurora absolute -top-24 right-[-10%] size-[520px] rounded-full bg-sky-300/25 blur-[120px] [animation-delay:-6s] dark:bg-sky-600/15" />
+      <div className="animate-aurora absolute top-[40%] left-[35%] size-[420px] rounded-full bg-blue-200/30 blur-[120px] [animation-delay:-12s] dark:bg-blue-500/10" />
     </div>
   )
 }
@@ -151,7 +151,7 @@ function Portrait() {
       <div className="relative overflow-hidden rounded-[2rem] p-[2px] shadow-2xl shadow-accent-900/10 dark:shadow-accent-500/10">
         <div
           aria-hidden
-          className="animate-spin-slow absolute top-1/2 left-1/2 aspect-square w-[160%] -translate-x-1/2 -translate-y-1/2 bg-[conic-gradient(from_0deg,#818cf8,#a78bfa,#f472b6,#818cf8)]"
+          className="animate-spin-slow absolute top-1/2 left-1/2 aspect-square w-[160%] -translate-x-1/2 -translate-y-1/2 bg-[conic-gradient(from_0deg,#2563eb,#38bdf8,#93c5fd,#2563eb)]"
         />
         <img
           src={profile.photo}
