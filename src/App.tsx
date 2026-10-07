@@ -21,7 +21,7 @@ export default function App() {
       <motion.div
         aria-hidden
         style={{ scaleX }}
-        className="fixed inset-x-0 top-0 z-50 h-0.5 origin-left bg-gradient-to-r from-accent-400 via-sky-400 to-violet-500"
+        className="fixed inset-x-0 top-0 z-50 h-0.5 origin-left bg-gradient-to-r from-accent-400 via-violet-400 to-pink-500"
       />
       <a
         href="#main"

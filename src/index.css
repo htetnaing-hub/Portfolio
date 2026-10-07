@@ -7,17 +7,17 @@
 @theme {
   --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
-  --color-accent-50: #f0fdfa;
-  --color-accent-100: #ccfbf1;
-  --color-accent-200: #99f6e4;
-  --color-accent-300: #5eead4;
-  --color-accent-400: #2dd4bf;
-  --color-accent-500: #14b8a6;
-  --color-accent-600: #0d9488;
-  --color-accent-700: #0f766e;
-  --color-accent-800: #115e59;
-  --color-accent-900: #134e4a;
-  --color-ink: #050816;
+  --color-accent-50: #eef2ff;
+  --color-accent-100: #e0e7ff;
+  --color-accent-200: #c7d2fe;
+  --color-accent-300: #a5b4fc;
+  --color-accent-400: #818cf8;
+  --color-accent-500: #6366f1;
+  --color-accent-600: #4f46e5;
+  --color-accent-700: #4338ca;
+  --color-accent-800: #3730a3;
+  --color-accent-900: #312e81;
+  --color-ink: #070816;
 
   --animate-marquee: marquee 40s linear infinite;
   --animate-aurora: aurora 18s ease-in-out infinite alternate;
@@ -79,9 +79,9 @@
 }
 
 @layer components {
-  /* Brand gradient text: teal → sky → violet */
+  /* Brand gradient text: indigo → violet → pink */
   .text-gradient {
-    @apply bg-gradient-to-r from-accent-600 via-sky-500 to-violet-600 bg-[length:200%_auto] bg-clip-text text-transparent dark:from-accent-300 dark:via-sky-400 dark:to-violet-400;
+    @apply bg-gradient-to-r from-accent-600 via-violet-500 to-pink-600 bg-[length:200%_auto] bg-clip-text text-transparent dark:from-accent-300 dark:via-violet-400 dark:to-pink-400;
   }
 
   /* Card whose border and background glow follow the cursor (see SpotlightCard). */
@@ -98,8 +98,8 @@
     padding: 1px;
     background: radial-gradient(
       420px circle at var(--x, 50%) var(--y, 50%),
-      rgb(45 212 191 / 0.8),
-      rgb(139 92 246 / 0.5) 35%,
+      rgb(129 140 248 / 0.9),
+      rgb(244 114 182 / 0.55) 35%,
       transparent 65%
     );
     -webkit-mask:
@@ -116,7 +116,7 @@
     inset: 0;
     z-index: -1;
     border-radius: inherit;
-    background: radial-gradient(500px circle at var(--x, 50%) var(--y, 50%), rgb(45 212 191 / 0.08), transparent 45%);
+    background: radial-gradient(500px circle at var(--x, 50%) var(--y, 50%), rgb(129 140 248 / 0.1), transparent 45%);
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
