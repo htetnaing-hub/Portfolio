@@ -28,9 +28,9 @@ export function Contact() {
     <section id="contact" aria-labelledby="contact-title" className="bg-slate-50/80 dark:bg-white/[0.015]">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
         <Reveal>
-          <div className="relative isolate overflow-hidden rounded-3xl bg-ink px-6 py-16 text-center ring-1 ring-white/10 sm:px-12">
+          <div className="relative isolate overflow-hidden rounded-3xl bg-gradient-to-br from-[#0f2a2c] to-[#0f766e] px-6 dark:from-[#0f3b3a] dark:to-[#0b1f2a] py-16 text-center ring-1 ring-white/10 sm:px-12">
             <div aria-hidden className="animate-aurora absolute -top-32 left-[10%] -z-10 size-96 rounded-full bg-accent-500/20 blur-[100px]" />
-            <div aria-hidden className="animate-aurora absolute -right-20 -bottom-40 -z-10 size-96 rounded-full bg-indigo-500/20 blur-[100px] [animation-delay:-8s]" />
+            <div aria-hidden className="animate-aurora absolute -right-20 -bottom-40 -z-10 size-96 rounded-full bg-accent-300/20 blur-[100px] [animation-delay:-8s]" />
             <div
               aria-hidden
               className="absolute inset-0 -z-10 [background-image:linear-gradient(to_right,rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.04)_1px,transparent_1px)] [background-size:40px_40px]"
@@ -38,7 +38,7 @@ export function Contact() {
 
             <p className="font-mono text-sm font-medium text-accent-300">08 · Contact</p>
             <h2 id="contact-title" className="mx-auto mt-3 max-w-2xl text-3xl font-bold tracking-tight text-balance text-white sm:text-5xl">
-              Let's build something <span className="bg-gradient-to-r from-accent-300 via-blue-400 to-indigo-400 bg-clip-text text-transparent">reliable</span> together
+              Let's build something <span className="bg-gradient-to-r from-accent-300 via-accent-400 to-accent-300 bg-clip-text text-transparent">reliable</span> together
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-lg text-pretty text-slate-300">
               I'm open to Java, Senior Java and Full-Stack roles, remote or on-site. The fastest way to reach me is email or LinkedIn.
@@ -47,7 +47,7 @@ export function Contact() {
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
               <a
                 href={`mailto:${profile.email}`}
-                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-accent-400 via-blue-400 to-indigo-400 px-5 py-3 text-sm font-semibold text-ink shadow-lg shadow-accent-400/20"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-accent-400 via-accent-400 to-accent-300 px-5 py-3 text-sm font-semibold text-ink shadow-lg shadow-accent-400/20"
               >
                 <Mail className="size-4" /> {profile.email}
               </a>

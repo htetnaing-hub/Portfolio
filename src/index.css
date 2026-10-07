@@ -7,17 +7,18 @@
 @theme {
   --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
-  --color-accent-50: #eff6ff;
-  --color-accent-100: #dbeafe;
-  --color-accent-200: #bfdbfe;
-  --color-accent-300: #93c5fd;
-  --color-accent-400: #60a5fa;
-  --color-accent-500: #3b82f6;
-  --color-accent-600: #2563eb;
-  --color-accent-700: #1d4ed8;
-  --color-accent-800: #1e40af;
-  --color-accent-900: #1e3a8a;
-  --color-ink: #09090b;
+  --color-accent-50: #f0fdfa;
+  --color-accent-100: #e6f6f4;
+  --color-accent-200: #99f6e4;
+  --color-accent-300: #5eead4;
+  --color-accent-400: #2dd4bf;
+  --color-accent-500: #14b8a6;
+  --color-accent-600: #0d9488;
+  --color-accent-700: #0f766e;
+  --color-accent-800: #0d5f59;
+  --color-accent-900: #134e4a;
+  --color-ink: #0b1020;
+  --color-canvas: #f3f5f8;
 
   --animate-marquee: marquee 40s linear infinite;
   --animate-aurora: aurora 18s ease-in-out infinite alternate;
@@ -68,7 +69,7 @@
     -webkit-tap-highlight-color: transparent;
   }
   body {
-    @apply bg-white text-slate-700 antialiased dark:bg-ink dark:text-slate-300;
+    @apply bg-canvas text-slate-700 antialiased dark:bg-ink dark:text-slate-300;
   }
   ::selection {
     @apply bg-accent-200 text-accent-900;
@@ -79,9 +80,9 @@
 }
 
 @layer components {
-  /* Brand gradient text: blue → indigo */
+  /* Brand text: teal, matching the MMK → VND Exchange app */
   .text-gradient {
-    @apply bg-gradient-to-r from-accent-600 via-blue-500 to-indigo-600 bg-[length:200%_auto] bg-clip-text text-transparent dark:from-accent-300 dark:via-blue-400 dark:to-indigo-400;
+    @apply bg-gradient-to-r from-accent-700 via-accent-600 to-accent-800 bg-[length:200%_auto] bg-clip-text text-transparent dark:from-accent-300 dark:via-accent-400 dark:to-accent-300;
   }
 
   /* Card whose border and background glow follow the cursor (see SpotlightCard). */
@@ -98,8 +99,8 @@
     padding: 1px;
     background: radial-gradient(
       420px circle at var(--x, 50%) var(--y, 50%),
-      rgb(96 165 250 / 0.9),
-      rgb(129 140 248 / 0.45) 35%,
+      rgb(45 212 191 / 0.9),
+      rgb(15 118 110 / 0.5) 35%,
       transparent 65%
     );
     -webkit-mask:
@@ -116,7 +117,7 @@
     inset: 0;
     z-index: -1;
     border-radius: inherit;
-    background: radial-gradient(500px circle at var(--x, 50%) var(--y, 50%), rgb(96 165 250 / 0.07), transparent 45%);
+    background: radial-gradient(500px circle at var(--x, 50%) var(--y, 50%), rgb(45 212 191 / 0.07), transparent 45%);
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;

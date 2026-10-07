@@ -51,7 +51,7 @@ export function ExperienceSection() {
                   {selected && (
                     <motion.span
                       layoutId="exp-bar"
-                      className="absolute top-3 bottom-3 left-0 hidden w-1 rounded-full bg-gradient-to-b from-accent-400 to-indigo-500 lg:block"
+                      className="absolute top-3 bottom-3 left-0 hidden w-1 rounded-full bg-gradient-to-b from-accent-400 to-accent-600 lg:block"
                     />
                   )}
                   <span className="relative block">
@@ -156,7 +156,7 @@ function JobPanel({ job }: { job: Experience }) {
             <ul className="mt-3 space-y-2.5">
               {group.items.map((a) => (
                 <li key={a} className="flex gap-3 text-[15px] leading-relaxed text-slate-700 dark:text-slate-300">
-                  <span aria-hidden className="mt-2.5 size-1.5 shrink-0 rounded-full bg-gradient-to-br from-accent-400 to-indigo-500" />
+                  <span aria-hidden className="mt-2.5 size-1.5 shrink-0 rounded-full bg-gradient-to-br from-accent-400 to-accent-600" />
                   <span>{a}</span>
                 </li>
               ))}
