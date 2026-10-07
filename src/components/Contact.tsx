@@ -38,7 +38,7 @@ export function Contact() {
 
             <p className="font-mono text-sm font-medium text-accent-300">08 · Contact</p>
             <h2 id="contact-title" className="mx-auto mt-3 max-w-2xl text-3xl font-bold tracking-tight text-balance text-white sm:text-5xl">
-              Let's build something <span className="bg-gradient-to-r from-accent-300 via-accent-400 to-sky-400 bg-clip-text text-transparent">reliable</span> together
+              Let's build something <span className="bg-gradient-to-r from-accent-300 via-accent-400 to-cyan-400 bg-clip-text text-transparent">reliable</span> together
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-lg text-pretty text-slate-300">
               I'm open to Java, Senior Java and Full-Stack roles, remote or on-site. The fastest way to reach me is email or LinkedIn.
@@ -47,7 +47,7 @@ export function Contact() {
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
               <a
                 href={`mailto:${profile.email}`}
-                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-accent-400 via-accent-400 to-sky-400 px-5 py-3 text-sm font-semibold text-ink shadow-lg shadow-accent-400/20"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-accent-400 via-accent-400 to-cyan-400 px-5 py-3 text-sm font-semibold text-ink shadow-lg shadow-accent-400/20"
               >
                 <Mail className="size-4" /> {profile.email}
               </a>
