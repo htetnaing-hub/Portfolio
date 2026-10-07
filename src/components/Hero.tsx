@@ -151,7 +151,7 @@ function Portrait() {
       <div className="relative overflow-hidden rounded-[2rem] p-[2px] shadow-2xl shadow-accent-900/10 dark:shadow-accent-500/10">
         <div
           aria-hidden
-          className="animate-spin-slow absolute top-1/2 left-1/2 aspect-square w-[160%] -translate-x-1/2 -translate-y-1/2 bg-[conic-gradient(from_0deg,#0ea5e9,#38bdf8,#67e8f9,#0ea5e9)]"
+          className="animate-spin-slow absolute top-1/2 left-1/2 aspect-square w-[160%] -translate-x-1/2 -translate-y-1/2 bg-[conic-gradient(from_0deg,#14b8a6,#22d3ee,#0ea5e9,#14b8a6)]"
         />
         <img
           src={profile.photo}

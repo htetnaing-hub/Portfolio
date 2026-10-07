@@ -7,16 +7,16 @@
 @theme {
   --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
-  --color-accent-50: #f0f9ff;
-  --color-accent-100: #e0f2fe;
-  --color-accent-200: #bae6fd;
-  --color-accent-300: #7dd3fc;
-  --color-accent-400: #38bdf8;
-  --color-accent-500: #0ea5e9;
-  --color-accent-600: #0284c7;
-  --color-accent-700: #0369a1;
-  --color-accent-800: #075985;
-  --color-accent-900: #0c4a6e;
+  --color-accent-50: #f0fdfa;
+  --color-accent-100: #ccfbf1;
+  --color-accent-200: #99f6e4;
+  --color-accent-300: #5eead4;
+  --color-accent-400: #2dd4bf;
+  --color-accent-500: #14b8a6;
+  --color-accent-600: #0d9488;
+  --color-accent-700: #0f766e;
+  --color-accent-800: #115e59;
+  --color-accent-900: #134e4a;
   --color-ink: #0a0f1c;
 
   --animate-marquee: marquee 40s linear infinite;
@@ -79,9 +79,9 @@
 }
 
 @layer components {
-  /* Brand gradient text: sky → cyan */
+  /* Brand gradient text: teal → cyan → sky (green-blue) */
   .text-gradient {
-    @apply bg-gradient-to-r from-accent-600 via-accent-500 to-cyan-600 bg-[length:200%_auto] bg-clip-text text-transparent dark:from-accent-300 dark:via-accent-400 dark:to-cyan-400;
+    @apply bg-gradient-to-r from-accent-600 via-cyan-500 to-sky-600 bg-[length:200%_auto] bg-clip-text text-transparent dark:from-accent-300 dark:via-cyan-400 dark:to-sky-400;
   }
 
   /* Card whose border and background glow follow the cursor (see SpotlightCard). */
@@ -98,8 +98,8 @@
     padding: 1px;
     background: radial-gradient(
       420px circle at var(--x, 50%) var(--y, 50%),
-      rgb(56 189 248 / 0.9),
-      rgb(34 211 238 / 0.45) 35%,
+      rgb(45 212 191 / 0.9),
+      rgb(56 189 248 / 0.5) 35%,
       transparent 65%
     );
     -webkit-mask:
@@ -116,7 +116,7 @@
     inset: 0;
     z-index: -1;
     border-radius: inherit;
-    background: radial-gradient(500px circle at var(--x, 50%) var(--y, 50%), rgb(56 189 248 / 0.08), transparent 45%);
+    background: radial-gradient(500px circle at var(--x, 50%) var(--y, 50%), rgb(45 212 191 / 0.08), transparent 45%);
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
