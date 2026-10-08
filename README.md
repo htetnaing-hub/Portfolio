@@ -1,6 +1,6 @@
 # Htet Naing Aung — Portfolio
 
-Personal portfolio of a Java software engineer, live at **https://htetnaing-hub.github.io/Portfolio/**.
+Personal portfolio of a full stack developer (Java, Kotlin, Angular, AI), live at **https://htetnaing-hub.github.io/Portfolio/**.
 
 [![Deploy to GitHub Pages](https://github.com/htetnaing-hub/Portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/htetnaing-hub/Portfolio/actions/workflows/deploy.yml)
 

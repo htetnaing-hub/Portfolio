@@ -14,10 +14,10 @@ export function ExperienceSection() {
       eyebrow="02 · Experience"
       title={
         <>
-          5+ years shipping <span className="text-gradient">production Java</span>
+          Nearly 6 years of <span className="text-gradient">full-stack delivery</span>
         </>
       }
-      intro="National logistics, e-commerce and ERP systems, from on-site enterprise teams to remote start-ups. Pick a company to see the details."
+      intro="Banking, e-commerce, logistics and ERP accounting systems, from on-site enterprise teams to remote start-ups. Pick a company to see the details."
       muted
     >
       <Reveal>

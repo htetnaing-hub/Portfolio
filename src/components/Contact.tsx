@@ -41,7 +41,7 @@ export function Contact() {
               Let's build something <span className="bg-gradient-to-r from-accent-300 via-accent-400 to-accent-300 bg-clip-text text-transparent">reliable</span> together
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-lg text-pretty text-slate-300">
-              I'm open to Java, Senior Java and Full-Stack roles, remote or on-site. The fastest way to reach me is email or LinkedIn.
+              I'm open to Full Stack, Java and Senior Java roles, remote, hybrid or on-site. The fastest way to reach me is email or LinkedIn.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">

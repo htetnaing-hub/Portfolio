@@ -1,5 +1,6 @@
 import { Bug, CheckCircle2, FlaskConical, Sparkles, Wand2 } from 'lucide-react'
 import { SiClaude, SiGithubcopilot } from 'react-icons/si'
+import { TbBrandOpenai } from 'react-icons/tb'
 import { aiPractices } from '../data/profile'
 import { Reveal, Section, SpotlightCard } from './ui'
 
@@ -9,6 +10,7 @@ const tools = [
   { name: 'Claude', Icon: SiClaude, color: 'text-[#d97757]' },
   { name: 'Claude Code', Icon: SiClaude, color: 'text-[#d97757]' },
   { name: 'GitHub Copilot', Icon: SiGithubcopilot, color: 'text-slate-900 dark:text-white' },
+  { name: 'ChatGPT', Icon: TbBrandOpenai, color: 'text-slate-900 dark:text-white' },
 ]
 
 export function AiEngineering() {
@@ -21,7 +23,7 @@ export function AiEngineering() {
           Faster delivery with AI, <span className="text-gradient">verified by tests</span>
         </>
       }
-      intro="I use AI coding tools every day across development, code review and testing. They speed up the work; tests, reviews and my own judgement decide what ships."
+      intro="I use Claude Code and GitHub Copilot hands-on every day across development, code review and testing, and I set my team's standard for validating AI-generated code. AI speeds up the work; tests, reviews and my own judgement decide what ships."
     >
       <Reveal>
         <ul className="flex flex-wrap gap-3">

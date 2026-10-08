@@ -1,6 +1,11 @@
 import { FaAws, FaJava } from 'react-icons/fa6'
+import { VscAzure } from 'react-icons/vsc'
 import {
   SiAngular,
+  SiApachemaven,
+  SiFlyway,
+  SiKotlin,
+  SiRabbitmq,
   SiApachekafka,
   SiDocker,
   SiGithubactions,
@@ -22,10 +27,13 @@ import {
 
 const tech = [
   { name: 'Java', Icon: FaJava },
+  { name: 'Kotlin', Icon: SiKotlin },
   { name: 'Spring Boot', Icon: SiSpringboot },
   { name: 'Hibernate', Icon: SiHibernate },
   { name: 'Apache Kafka', Icon: SiApachekafka },
+  { name: 'RabbitMQ', Icon: SiRabbitmq },
   { name: 'PostgreSQL', Icon: SiPostgresql },
+  { name: 'Flyway', Icon: SiFlyway },
   { name: 'MySQL', Icon: SiMysql },
   { name: 'MongoDB', Icon: SiMongodb },
   { name: 'Redis', Icon: SiRedis },
@@ -34,8 +42,10 @@ const tech = [
   { name: 'TypeScript', Icon: SiTypescript },
   { name: 'Docker', Icon: SiDocker },
   { name: 'Kubernetes', Icon: SiKubernetes },
+  { name: 'Azure', Icon: VscAzure },
   { name: 'AWS', Icon: FaAws },
   { name: 'Google Cloud', Icon: SiGooglecloud },
+  { name: 'Maven', Icon: SiApachemaven },
   { name: 'Jenkins', Icon: SiJenkins },
   { name: 'GitHub Actions', Icon: SiGithubactions },
   { name: 'JUnit 5', Icon: SiJunit5 },

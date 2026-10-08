@@ -4,19 +4,19 @@ export const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`
 
 export const profile = {
   name: 'Htet Naing Aung',
-  role: 'Java Software Engineer',
-  roles: ['Java Software Engineer', 'Senior Java Developer', 'Full-Stack Engineer', 'REST API & Microservices Engineer'],
-  headline: 'I build reliable Java & Spring Boot systems that scale.',
+  role: 'Full Stack Developer',
+  roles: ['Full Stack Developer', 'Java & Kotlin Engineer', 'AI-assisted Developer', 'Event-driven Microservices Engineer'],
+  headline: 'I build event-driven microservices, secure APIs and Angular front ends.',
   summary:
-    'Software engineer with 5+ years of experience shipping Spring Boot microservices, REST APIs and event-driven systems for logistics, e-commerce and ERP platforms, with Angular and React on the front end. I use AI tools like Claude Code and GitHub Copilot to move faster, and tests and code review to keep quality high.',
+    'AI-experienced Full Stack Developer with nearly 6 years of Java, Kotlin and Spring Boot across financial services, banking, ERP accounting and e-commerce. I use Claude Code and GitHub Copilot every day, and every AI-generated change is tested and reviewed like hand-written code.',
   location: 'Da Lat, Vietnam',
-  availability: 'Open to new roles · Remote or on-site',
+  availability: 'Open to new roles · Remote, hybrid or on-site',
   email: 'htetnaing.ucsmdy@gmail.com',
   phone: '+84 359 624 255',
   whatsapp: '+84 359 624 255',
   line: '+95 996 151 4366',
   photo: asset('images/profile.webp'),
-  cv: asset('files/Htet_Naing_Aung_Java_Developer_CV.pdf'),
+  cv: asset('files/Htet_Naing_Aung_Full_Stack_Developer_CV.pdf'),
   recommendation: asset('files/Recommendation_Letter.pdf'),
   links: {
     github: 'https://github.com/htetnaing-hub',
@@ -27,7 +27,7 @@ export const profile = {
 }
 
 export const stats = [
-  { value: 5, suffix: '+', label: 'Years building production software' },
+  { value: 5, suffix: '+', label: 'Years of full-stack development' },
   { value: 3, suffix: '', label: 'Companies & clients' },
   { value: 7, suffix: '', label: 'Industry certifications' },
   { value: 2, suffix: '', label: 'Team awards at NTT DATA' },
@@ -35,9 +35,9 @@ export const stats = [
 
 export const about = {
   paragraphs: [
-    'I am a Java engineer from Myanmar, now based in Vietnam. Most of my career has been on the backend: Spring Boot microservices, REST APIs, batch processing, Kafka messaging and the databases behind them. I am equally comfortable building the Angular or React screens that use those APIs.',
-    'At NTT DATA I worked on the Myanmar Automated Cargo Clearance System (MACCS), a national logistics platform where correctness and uptime matter. Before that, I built ERP modules end to end with Angular and Spring Boot at METATEAM. Most recently I have been building REST APIs for start-ups in Myanmar and Thailand.',
-    'I enjoy owning a feature across the whole SDLC, from requirements and design to deployment and production support, and working with international product, QA and DevOps teams in Agile environments.',
+    'I am a full stack developer from Myanmar, now based in Vietnam. I build Java, Kotlin and Spring Boot microservices, secure REST APIs and Kafka event-driven systems, plus the Angular (and React) front ends that use them.',
+    'At NTT DATA I worked on banking, e-commerce and logistics systems, including the Myanmar Automated Cargo Clearance System (MACCS), where security, data accuracy and uptime matter. Before that I built ERP accounting, procurement and sales modules end to end with Angular and Spring Boot at METATEAM. Since 2025 I have been building full-stack features for start-ups in Myanmar and Thailand.',
+    'AI coding assistants are part of how I work every day. I defined my team’s standard that AI-generated code must pass unit tests, security checks and code review before it reaches production, and I build Claude Code skills, MCP servers and Spring AI features myself.',
   ],
 }
 
@@ -46,24 +46,24 @@ export type RoleFit = { title: string; description: string; skills: string[] }
 /** The kinds of positions this portfolio targets, and the evidence for each. */
 export const roleFits: RoleFit[] = [
   {
-    title: 'Java / Senior Java Developer',
-    description: 'Core Java, Spring Boot and clean, tested backend code that runs reliably in production.',
-    skills: ['Java 8–25', 'Spring Boot', 'JPA / Hibernate', 'Concurrency', 'JUnit'],
+    title: 'Full Stack Developer',
+    description: 'Features end to end: PostgreSQL schema, Spring Boot APIs and Angular / TypeScript UI components.',
+    skills: ['Java', 'Kotlin', 'Spring Boot', 'Angular', 'TypeScript'],
   },
   {
-    title: 'Full-Stack Engineer',
-    description: 'Feature delivery from database schema to UI with Spring Boot APIs and Angular or React front ends.',
-    skills: ['Angular', 'React', 'TypeScript', 'Spring Boot', 'PostgreSQL'],
+    title: 'Event-driven Microservices',
+    description: 'Kafka-based services that stay reliable under high volume, with resilience patterns and caching.',
+    skills: ['Kafka', 'RabbitMQ', 'Microservices', 'Redis', 'Resilience'],
   },
   {
-    title: 'REST API & Microservices',
-    description: 'Well-designed REST contracts, secure services and event-driven communication between them.',
-    skills: ['REST', 'OpenAPI', 'Spring Security', 'Kafka', 'Spring Batch'],
+    title: 'Secure APIs & Data',
+    description: 'RESTful APIs secured with Spring Security, JWT and OAuth2, backed by tuned PostgreSQL.',
+    skills: ['REST', 'Spring Security', 'JWT / OAuth2', 'PostgreSQL', 'Flyway'],
   },
   {
-    title: 'Cloud & DevOps-minded',
-    description: 'Containerised services with CI/CD pipelines on AWS, Google Cloud and Oracle Cloud.',
-    skills: ['Docker', 'Kubernetes', 'Jenkins', 'GitHub Actions', 'AWS · GCP · OCI'],
+    title: 'Cloud-native & AI-assisted',
+    description: 'Containerised delivery with CI/CD on Azure, AWS and GCP, built faster with AI coding tools.',
+    skills: ['Azure', 'Docker', 'Kubernetes', 'Maven', 'Claude Code'],
   },
 ]
 
@@ -89,42 +89,35 @@ export type Experience = {
 export const experience: Experience[] = [
   {
     id: 'freelance',
-    company: 'Start-up clients (Myanmar & Thailand)',
-    shortName: 'Freelance',
-    role: 'Java Backend Developer — REST APIs',
-    period: 'Oct 2025 – Jul 2026',
-    duration: '10 mos',
+    company: 'Confidential start-up (Myanmar & Thailand)',
+    shortName: 'Start-up',
+    role: 'Full Stack Developer (Java, Kotlin, Angular)',
+    period: 'Jul 2025 – Present',
+    duration: '1 yr+',
     location: 'Remote',
-    type: 'Freelance · Part-time',
-    project: { name: 'Web applications for start-ups' },
+    type: 'Part-time · Freelance',
+    project: { name: 'Full-stack web applications' },
     summary:
-      'Designed and built REST APIs for start-up web applications, working directly with frontend developers and business stakeholders, and using AI tools to deliver faster without lowering the quality bar.',
+      'Building full-stack features from API design to reusable UI components with Java, Kotlin, Spring Boot and Angular, and leading how the team uses AI coding tools safely.',
     highlights: [
       {
-        title: 'API development',
+        title: 'Full-stack development',
         items: [
-          'Developed and optimized scalable RESTful APIs with Java and Spring Boot to support new web application features and business requirements.',
-          'Integrated authentication, authorization and third-party services following secure-coding and REST API best practices.',
-          'Designed and implemented database operations focused on efficient data management, performance and data integrity.',
+          'Develop full-stack features with Java, Kotlin, Spring Boot and Angular (v15+) / TypeScript, from API design to reusable UI components.',
+          'Build secure RESTful APIs with Spring Security, JWT and OAuth2, and integrate third-party services.',
+          'Design database operations for performance, data integrity and efficient data management.',
         ],
       },
       {
         title: 'AI-assisted engineering',
         items: [
-          'Used Claude, Claude Code and GitHub Copilot to scaffold features, refactor code and draft documentation, reviewing every change before merging.',
-          'Used AI review passes alongside human code review to catch bugs, edge cases and security issues earlier.',
-          'Generated and extended unit and integration tests with AI assistance, then validated behaviour by running the suites and checking results by hand.',
-        ],
-      },
-      {
-        title: 'Collaboration & delivery',
-        items: [
-          'Collaborated with frontend developers and business stakeholders to turn requirements into working features.',
-          'Took part in code reviews, troubleshooting, testing and deployment to keep releases reliable and improving.',
+          'Use Claude Code and GitHub Copilot daily for code generation, refactoring, unit testing, debugging and documentation.',
+          'Defined the team’s AI standard: AI-generated code must pass unit tests, security checks and code review before production.',
+          'Built Claude Code skills, MCP servers and prompt templates, and integrated LLM APIs with Spring AI for AI-powered features.',
         ],
       },
     ],
-    stack: ['Java', 'Spring Boot', 'Spring Security', 'JPA', 'PostgreSQL', 'MySQL', 'Docker', 'Claude Code', 'GitHub Copilot'],
+    stack: ['Java', 'Kotlin', 'Spring Boot', 'Spring Security', 'JWT / OAuth2', 'Angular', 'TypeScript', 'PostgreSQL', 'Spring AI', 'Claude Code', 'GitHub Copilot'],
   },
   {
     id: 'nttdata',
@@ -138,48 +131,45 @@ export const experience: Experience[] = [
     location: 'Yangon, Myanmar',
     type: 'Full-time · On-site',
     project: {
-      name: 'Myanmar Automated Cargo Clearance System (MACCS)',
+      name: 'Banking, e-commerce & MACCS national logistics',
       url: 'https://myanmar.gov.mm/-/myanmar-automated-cargo-clearance-system-maccs-',
     },
     summary:
-      'Backend engineer on the Batch Team of a national logistics and customs-clearance platform, plus e-commerce services, built as Java/Spring Boot microservices for thousands of concurrent users.',
+      'Java/Spring Boot engineer on banking, e-commerce and logistics platforms, including the Myanmar Automated Cargo Clearance System, working with international Product, QA and DevOps teams.',
     highlights: [
       {
-        title: 'Architecture & development',
+        title: 'Secure APIs & microservices',
         items: [
-          'Developed and maintained scalable Java/Spring Boot microservices supporting high-volume consumer and enterprise applications in production.',
-          'Designed, implemented and optimized RESTful APIs and backend services following microservices architecture and clean-code principles.',
-          'Built event-driven systems with Apache Kafka for reliable, high-throughput communication and real-time features such as notifications, order tracking and live analytics.',
-          'Developed Spring Batch jobs that efficiently process large volumes of business and transactional data.',
+          'Developed Java/Spring Boot services and secure REST APIs for a banking project with strict security and data-accuracy standards.',
+          'Built event-driven microservices with Apache Kafka for high-volume e-commerce, logistics and banking applications.',
+          'Developed Spring Batch jobs that process large volumes of business and transactional data.',
         ],
       },
       {
-        title: 'Data, performance & reliability',
+        title: 'Reliability & performance',
         items: [
-          'Designed and optimized data access across PostgreSQL, MySQL, MongoDB, Redis and Cassandra for high-performance, scalable applications.',
-          'Applied SQL optimization to improve query performance for large-scale transaction processing.',
-          'Performed performance tuning, troubleshooting and monitoring to keep enterprise-scale platforms highly available.',
-          'Investigated and resolved production incidents and bugs across the logistics system, recognised with the 2024 Support Team Award.',
+          'Implemented resilience patterns (circuit breakers, retries, timeouts) and Redis caching for reliable, low-latency services.',
+          'Tuned PostgreSQL and MySQL queries for large-scale transaction processing.',
+          'Investigated and resolved production incidents on the logistics platform, recognised with the 2024 Support Team Award.',
         ],
       },
       {
-        title: 'Cloud, testing & delivery',
+        title: 'Cloud-native delivery',
         items: [
-          'Deployed and managed cloud-native applications on AWS, GCP and Oracle Cloud Infrastructure using Docker and Kubernetes.',
-          'Implemented unit, integration and acceptance testing that improved reliability and supported CI/CD pipelines with Jenkins and GitHub Actions.',
-          'Owned the full SDLC, from requirements analysis and design to development, testing, deployment and production support.',
+          'Deployed cloud-native services with Docker and Kubernetes on AWS, GCP and OCI.',
+          'Automated build, test and deployment with Jenkins and GitHub Actions CI/CD and JUnit test suites.',
         ],
       },
       {
-        title: 'Collaboration & leadership',
+        title: 'AI adoption & teamwork',
         items: [
-          'Delivered the Regional Expansion (Tachileik) release within the contract timeline without release defects, earning the 2025 Collaboration Team Award.',
-          'Collaborated with international Product, QA, DevOps and engineering teams in Agile/Scrum.',
-          'Mentored junior engineers on clean code, test-driven development and DevOps practices.',
+          'Adopted GitHub Copilot and set validation practices for AI-generated code: code review, JUnit coverage and static analysis.',
+          'Built React / TypeScript internal tools and mentored junior engineers.',
+          'Delivered the Regional Expansion (Tachileik) release on schedule with no release defects, earning the 2025 Collaboration Team Award.',
         ],
       },
     ],
-    stack: ['Java', 'Spring Boot', 'Spring Batch', 'Apache Kafka', 'Microservices', 'PostgreSQL', 'MySQL', 'Redis', 'Docker', 'Kubernetes', 'AWS', 'GCP', 'OCI', 'Jenkins'],
+    stack: ['Java', 'Spring Boot', 'Spring Security', 'Spring Batch', 'Apache Kafka', 'PostgreSQL', 'Redis', 'Docker', 'Kubernetes', 'AWS', 'GCP', 'React', 'GitHub Copilot'],
   },
   {
     id: 'metateam',
@@ -192,32 +182,23 @@ export const experience: Experience[] = [
     duration: '1 yr 7 mos',
     location: 'Yangon, Myanmar',
     type: 'Full-time · On-site',
-    project: { name: 'Enterprise ERP System' },
+    project: { name: 'Enterprise ERP system' },
     summary:
-      'Built ERP modules end to end, from PostgreSQL schema and Spring Boot APIs to the Angular screens enterprise users work in every day.',
+      'Built ERP modules end to end, from PostgreSQL schema and Spring Boot APIs to the Angular screens finance and operations users work in every day.',
     highlights: [
       {
-        title: 'Full-stack feature delivery',
+        title: 'Full-stack ERP modules',
         items: [
-          'Designed and implemented core ERP modules: inventory management, procurement, sales orders and financial accounting with Java, Spring Boot and PostgreSQL.',
-          'Developed scalable RESTful APIs with Spring Data JPA and Hibernate for data access and business logic across ERP components.',
-          'Built dynamic, responsive Angular interfaces that improved usability and workflow efficiency for enterprise users.',
+          'Built full-stack ERP modules for financial accounting, procurement, sales and inventory with Angular, TypeScript, Spring Boot and PostgreSQL.',
+          'Created reusable Angular components and REST APIs with Spring Data JPA and Hibernate.',
         ],
       },
       {
-        title: 'Security & performance',
+        title: 'Security, data & delivery',
         items: [
-          'Secured frontend-to-backend communication with role-based access control and data validation on the REST APIs.',
-          'Optimized database schema and SQL queries for high transaction volumes and concurrent users.',
-        ],
-      },
-      {
-        title: 'Quality & delivery',
-        items: [
-          'Automated build, test and deployment pipelines with Jenkins and GitLab CI/CD for rapid delivery and safe rollback.',
-          'Wrote unit and integration tests to keep coverage high and production defects low.',
-          'Used GitHub pull requests, branching strategies and issue tracking to keep code quality high.',
-          'Worked in Agile/Scrum with QA, DevOps and business analysts, from sprint planning to retrospectives.',
+          'Secured financial data with role-based access control and validation.',
+          'Designed schemas and tuned SQL for high transaction volumes and concurrent users.',
+          'Automated build, test and deployment with Jenkins and GitLab CI/CD in Agile/Scrum sprints.',
         ],
       },
     ],
@@ -227,16 +208,15 @@ export const experience: Experience[] = [
 
 export type AiPractice = { title: string; description: string; points: string[] }
 
-export const aiTools = ['Claude', 'Claude Code', 'GitHub Copilot']
-
 export const aiPractices: AiPractice[] = [
   {
     title: 'Development',
-    description: 'Ship features faster with an AI pair programmer, while keeping the design decisions mine.',
+    description: 'Claude Code and Copilot speed up the routine work, while the design decisions stay mine.',
     points: [
-      'Scaffold Spring Boot services, DTOs and REST endpoints',
-      'Refactor legacy code and explain unfamiliar codebases',
-      'Draft ADRs, API docs and READMEs',
+      'Scaffold Spring Boot / Kotlin services, DTOs and Angular components',
+      'Refactor and debug faster, and draft ADRs and API docs',
+      'Built Claude Code skills, MCP servers and prompt templates',
+      'Integrated LLM APIs with Spring AI for AI-powered features',
     ],
   },
   {
@@ -245,15 +225,15 @@ export const aiPractices: AiPractice[] = [
     points: [
       'Spot bugs, race conditions and missing edge cases',
       'Flag security issues such as injection and broken auth',
-      'Suggest simpler, more readable alternatives',
+      'Static analysis alongside human review',
     ],
   },
   {
     title: 'Testing & validation',
     description: 'AI writes test drafts; real test runs decide whether the code is correct.',
     points: [
-      'Generate JUnit, integration and Testcontainers tests',
-      'Cover boundary cases and failure paths',
+      'Generate JUnit, Mockito and Testcontainers tests',
+      'Team rule I defined: AI code must pass tests, security checks and review',
       'Validate every AI change by running the suite and reviewing the diff',
     ],
   },
@@ -274,14 +254,14 @@ export const projects: Project[] = [
     name: 'Unified Document Viewer',
     label: 'Backend · System design',
     description:
-      'A single VIN search that queries two dealership systems in parallel and merges every vehicle document into one list.',
+      'A single VIN search that queries two dealership systems in parallel and merges every vehicle document into one list behind one REST API.',
     points: [
       'Parallel fan-out with 2 s per-source timeouts and graceful partial results',
       'Falls back to last-known documents flagged as stale; returns 503 instead of a misleading empty list',
-      'Audit trail in PostgreSQL, Micrometer tracing, Prometheus metrics, OpenAPI docs',
+      'PostgreSQL with Flyway migrations, audit trail, Micrometer tracing, Prometheus metrics, OpenAPI docs',
       'Tested with JUnit, WireMock and Testcontainers; ADRs and an AI-usage log included',
     ],
-    stack: ['Java 25', 'Spring Boot 4', 'PostgreSQL', 'Flyway', 'Testcontainers', 'WireMock', 'Docker'],
+    stack: ['Java 25', 'Spring Boot 4', 'PostgreSQL', 'Flyway', 'Maven', 'Testcontainers', 'WireMock', 'Docker'],
     repo: 'https://github.com/htetnaing-hub/unified-document-viewer',
   },
   {
@@ -314,7 +294,7 @@ export const projects: Project[] = [
   {
     name: 'This portfolio',
     label: 'Frontend · Web',
-    description: 'The site you are reading: a fast, accessible single-page app with light and dark themes.',
+    description: 'The site you are reading: a fast, accessible single-page app with light and dark themes, installable on phones.',
     points: [
       'Typed content model, so updates never touch components',
       'Motion animations that respect reduced-motion settings',
@@ -328,17 +308,17 @@ export const projects: Project[] = [
 export type SkillGroup = { title: string; skills: string[] }
 
 export const skillGroups: SkillGroup[] = [
-  { title: 'Languages', skills: ['Java 8–25', 'SQL', 'TypeScript', 'JavaScript', 'HTML5 / CSS3'] },
+  { title: 'Languages', skills: ['Java 8–25', 'Kotlin', 'TypeScript', 'JavaScript ES6+', 'SQL', 'Python'] },
   {
     title: 'Backend',
-    skills: ['Spring Boot', 'Spring Security', 'Spring Data JPA', 'Spring Batch', 'Hibernate', 'JDBC', 'J2EE / Servlet / JSP', 'REST APIs', 'Microservices', 'Concurrency'],
+    skills: ['Spring Boot', 'Spring Security', 'Spring Data JPA', 'Spring Batch', 'Spring AI', 'Hibernate', 'JDBC', 'REST APIs', 'JWT / OAuth2', 'Resilience patterns'],
   },
-  { title: 'Frontend', skills: ['Angular', 'React', 'TypeScript', 'Bootstrap', 'Tailwind CSS', 'Responsive design'] },
-  { title: 'Messaging & Data', skills: ['Apache Kafka', 'PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Cassandra'] },
-  { title: 'Cloud & DevOps', skills: ['AWS', 'Google Cloud', 'Oracle Cloud (OCI)', 'Docker', 'Kubernetes', 'Jenkins', 'GitHub Actions', 'GitLab CI', 'Maven'] },
-  { title: 'Testing & Quality', skills: ['JUnit', 'Testcontainers', 'WireMock', 'Integration testing', 'Code review', 'Clean code'] },
-  { title: 'AI-assisted Engineering', skills: ['Claude', 'Claude Code', 'GitHub Copilot', 'AI code review', 'AI test generation'] },
-  { title: 'Tools & Practices', skills: ['Git', 'GitHub', 'SVN', 'Agile / Scrum', 'SDLC ownership', 'Mentoring'] },
+  { title: 'Frontend', skills: ['Angular (v15+)', 'TypeScript', 'React', 'HTML5 / CSS3', 'Bootstrap', 'Tailwind CSS'] },
+  { title: 'Event-driven & Data', skills: ['Apache Kafka', 'RabbitMQ', 'Microservices', 'PostgreSQL', 'Flyway', 'MySQL', 'Redis', 'MongoDB'] },
+  { title: 'Cloud & DevOps', skills: ['Azure', 'AWS', 'Google Cloud', 'Oracle Cloud (OCI)', 'Docker', 'Kubernetes', 'Maven', 'GitHub Actions', 'Jenkins', 'GitLab CI'] },
+  { title: 'Testing & Quality', skills: ['JUnit', 'Mockito', 'Testcontainers', 'WireMock', 'Static analysis', 'Code review'] },
+  { title: 'AI Coding Tools', skills: ['Claude Code', 'GitHub Copilot', 'ChatGPT', 'MCP servers', 'LLM APIs', 'Prompt templates'] },
+  { title: 'Practices', skills: ['Agile / Scrum', 'Data structures & algorithms', 'SDLC ownership', 'Git / GitHub', 'Mentoring'] },
 ]
 
 export type Certification = {
@@ -427,4 +407,4 @@ export const education = {
   image: asset('images/degree.webp'),
 }
 
-export const languages = ['English — professional working proficiency', 'Burmese — native']
+export const languages = ['English — fluent', 'Burmese — native']
